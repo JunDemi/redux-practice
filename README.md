@@ -19,7 +19,7 @@ store는 전역 상태의 정보를 객체로 관리하는 역할을 합니다.
 ### 2. Reducer
 새로운 상태를 반환하는 함수입니다. <br/>
 상태의 변화를 일으키게 되면 action이라는 것이 발생하는데, 이 action을 하나의 객체로 선언해서 관리할 수 있습니다. <br/>
-기본적으로 전역 상태의 이름과 초깃값을 지정하고, reducer객체 안에 action을 적용합니다.
+기본적으로 전역 상태의 이름과 초깃값을 지정하고, reducers객체 안에 action을 적용합니다.
 
     /*redux/reducer.js*/
     import { createSlice } from "@reduxjs/toolkit";
@@ -44,7 +44,7 @@ store는 전역 상태의 정보를 객체로 관리하는 역할을 합니다.
     export const {secondPage, thirdPage} = counterSlice.actions;
     export default counterSlice.reducer;
 ### 3. store
-인덱스에 값을 지정해주었던 store입니다. 하나의 프로젝트에는 하나의 store만 가지게 됩니다. <br/>
+index에 값을 지정해주었던 store입니다. 하나의 프로젝트에는 하나의 store만 가지게 됩니다. <br/>
 store안에는 reducer.js에서 만든 초깃값을 지정한 상태와 reducer가 포함됩니다.
 
     /*redux/store.js*/
@@ -58,3 +58,8 @@ store안에는 reducer.js에서 만든 초깃값을 지정한 상태와 reducer�
       });
 
     export default store;
+### useSelector()
+store에 저장된 상태를 클라이언트에 불러오는 것입니다.
+
+    const count = useSelector((state) => state.counter.value);
+이렇게 되면 count를 프론트에 불러올 수 있습니다.
