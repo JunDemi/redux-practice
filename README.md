@@ -58,7 +58,7 @@ store안에는 reducer.js에서 만든 초깃값을 지정한 상태와 reducer�
       });
 
     export default store;
-### useSelector()
+### 4. useSelector()
 store에 저장된 상태를 클라이언트에 불러오는 것입니다.
 
     const count = useSelector((state) => state.counter.value);
