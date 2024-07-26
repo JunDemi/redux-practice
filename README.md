@@ -65,7 +65,7 @@ store에 저장된 상태를 클라이언트에 불러오는 것입니다.
 이렇게 되면 count를 프론트에 불러올 수 있습니다.
 ### 5.useDispatch()
 전역 상태 값을 변경합니다.  <br/>
-상태 값을 변환하기 위해선 reducer의 action을 불러오면 된다.
+상태 값을 변환하기 위해선 reducer의 action을 불러오면 됩니다.
 
     const dispatch = useDispatch();
     return (
